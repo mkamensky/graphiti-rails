@@ -131,7 +131,7 @@ module Graphiti
           end
 
           route = begin
-                    ::Rails.application.routes.recognize_path(path, method: method)
+										::Rails.application.routes.recognize_path(path.to_s, method: method)
                   rescue
                     nil
                   end
